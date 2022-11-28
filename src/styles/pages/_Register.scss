@@ -4,11 +4,11 @@ main {
   justify-content: center;
 }
 
-.login-title {
+.register-title {
   margin-bottom: 35px;
 }
 
-.login-form-container {
+.register-form-container {
   & input {
     border: 1px solid black;
     padding: 12px 20px;
@@ -18,7 +18,7 @@ main {
     background-color: #1B4965;
     color: white;
     padding: 15px 0;
-    margin: 15px 0;
+    margin: 5px 0 10px 0;
     border: none;
     border-radius: 8px;
     width: 100%;
@@ -30,13 +30,9 @@ main {
   }
 }
 
-.login-forgot-password {
-  float: right;
-}
-
 $breakpoint-tablet: 768px;
 @media (min-width: $breakpoint-tablet) {
-  .login-form-container {
+  .register-form-container {
     min-width: 400px;
   }
 }

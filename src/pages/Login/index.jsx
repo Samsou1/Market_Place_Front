@@ -4,11 +4,11 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
@@ -27,10 +27,10 @@ function Login() {
 
   return (
     <>
-      <h1 className="title-form">Login</h1>
-      <form onSubmit={handleSubmit} className="container-form">
+      <h1 className="login-title">Login</h1>
+      <form onSubmit={handleSubmit} className="login-form-container">
         <div className='input-container'>
-          <label bel htmlFor="username">Email </label>
+          <label htmlFor="username">Email</label>
           <input
             onChange={(e) => setEmail(e.target.value)}
             value={email}
@@ -44,19 +44,15 @@ function Login() {
           <input
             onChange={(e) => setPassword(e.target.value)}
             value={password}
-            type="text"
+            type="password"
             id="password"
             placeholder="Password"
           />
         </div>
-        <button className="btn-signup">Sign Up</button>
-        <div>
-          <p>Don't have an account?</p>
-          <Link className="link" to='/register' >Register</Link>
-        </div>
-        <div>
-          <p>Don't remember your password?</p>
-          <Link className="link" to='/resetpassword' >Click here</Link>
+        <Link className="login-forgot-password" to='/resetpassword' >Forgot your password?</Link>
+        <button>Log in</button>
+        <div className="login-no-account">
+          <p>Don't have an account? <span><Link className="link" to='/register'>Register</Link></span></p>
         </div>
       </form>
     </>
