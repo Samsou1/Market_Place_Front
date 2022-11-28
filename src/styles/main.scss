@@ -1,8 +1,10 @@
 @charset 'utf-8';
 @import "./base/reset";
 @import "./base/base";
-@import "./pages/About";
 @import "./components/navbar";
 @import "./components/footer";
 @import "./components/LogoutButton";
 @import "./components/hero";
+@import "./pages/About";
+@import "./pages/Login";
+@import "./pages/Register";
