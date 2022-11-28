@@ -17,14 +17,17 @@ function Register() {
                 password: password
             }
         }
+        if (password === confirmpd) {
         try {
             await APIManager.registerUser(data);
             navigate('/');
         } catch (err) {
             console.error(err)
         }
+    } else { 
+            return  <div> Password do not match </div>
     }
-
+    }
     return (
         <>
             <h1 className="register-title">Register</h1>
