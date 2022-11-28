@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 65px;
+  background-color: #659DBD;
+  height: 80px;
+  & img {
+    height: 30px;
+  }
+  & nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 10px;
+    & li a {
+      letter-spacing: 0.2px;
+      &:link {
+        color: #242582;
+      }
+      &:visited {
+        color: #242582;
+      }
+      &:hover {
+        color: #242582;
+        border-bottom: 2px solid #242582;
+      }
+    }
+  }
+}
