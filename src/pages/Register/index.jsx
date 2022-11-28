@@ -52,6 +52,16 @@ function Register() {
                         placeholder="Password"
                     />
                 </div>
+                <div className='input-container'>
+                    <label htmlFor="password">Confirm Password</label>
+                    <input
+                        onChange={(e) => setConfirmPd(e.target.value)}
+                        value={confirmpd}
+                        type="password"
+                        id="password"
+                        placeholder="Password"
+                    />
+                </div>
                 <button>Sign Up</button>
                 <p>Already have an account? <span><Link className="link" to='/login' >Log in</Link></span></p>
             </form>
