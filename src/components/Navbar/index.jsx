@@ -7,6 +7,7 @@ const Navbar = () => {
   return(
     <header>
       <Link className="link" to='/' ><img src="../../../public/logo.png" alt="logo"></img></Link>
+      <h1 className='company'>ImmoCorps</h1>
       <nav>
         <ul>
           <li><Link className="link" to='/' >Home</Link></li>
