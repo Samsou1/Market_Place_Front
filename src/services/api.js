@@ -59,4 +59,31 @@ export default class APIManager {
             }
         }
     }
+
+    static async getAllApartments() {
+        try{
+            const response = await API.get('/apartments');
+            return response.data;
+        }catch{
+            throw new Error("Something went wrong");
+        }
+    }
+
+    static async getApartment(id) {
+        try{
+            const response = await API.get(`/apartments/${id}`);
+            return response.data;
+        }catch{
+            throw new Error("Something went wrong");
+        }
+    }
+
+    static async getUser(id) {
+        try{
+            const response = await API.get(`/users/${id}`);
+            return response.data;
+        }catch{
+            throw new Error("Something went wrong");
+        }
+    }
 }

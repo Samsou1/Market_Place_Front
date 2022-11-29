@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Resetpassword from './pages/ResetPassword'
+import ApartmentView from './components/ApartmentView';
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
           <Route path='/login' element={<Login />} /> 
           <Route path='/about' element={<About />} />
           <Route path='/resetpassword' element={<Resetpassword />} />
+          <Route path='/apartments/:id' element={<ApartmentView />} />
+
           <Route element={<PrivateRoute />}>
 
 
