@@ -11,8 +11,10 @@ import Footer from './components/Footer';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Resetpassword from './pages/ResetPassword'
-import ApartmentView from './components/ApartmentView';
+import ApartmentView from './pages/ShowApartment';
 import NewApartment from './pages/NewApartment';
+import MyApartments from './pages/MyApartments';
+import EditApartment from './pages/EditApartment';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
           <Route path='/apartments/:id' element={<ApartmentView />} />
           <Route element={<PrivateRoute />}>
             <Route path='/newapartment' element={<NewApartment />} />
+            <Route path='/myapartments' element={<MyApartments />} />
+            <Route path='/editapartment/:id' element={<EditApartment />} />
           </Route>
         </Routes>
       </main>
