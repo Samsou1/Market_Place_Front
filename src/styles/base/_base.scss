@@ -1,9 +1,13 @@
+$font-family-title: 'Urbanist', sans-serif;
+$font-family-content: 'Red Hat Text', sans-serif;
+
 html{
   height: 100%;
 }
 
 body{
   height:100%;
+  font-family: $font-family-content;
 }
 
 #root{
@@ -12,6 +16,10 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: space-around;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-title;
 }
 
 a{
