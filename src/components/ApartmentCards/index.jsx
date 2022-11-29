@@ -12,7 +12,7 @@ const ApartmentCards = () => {
   },[])
 
   return (
-    <div>
+    <div className=''>
       <h2>Our selection of apartments:</h2>
       <div className='apartmentCards'>
         {apartments.map(apartment => {

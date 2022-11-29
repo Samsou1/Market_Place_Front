@@ -1,36 +1,20 @@
+h1, h2, h3, h4, h5, h6 {
+  color: $color-navy;
+}
+
 .about{
   display: flex;
   flex-direction: column;
   align-items: center;
   gap:2rem;
   margin: 2rem;
-}
-
-.about-story{
-  max-width: 80%;
-  display: flex;
-  border: solid #659DBD 1px;
-  border-radius: 5px;
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.about-story-left{
-  flex: 2;
-}
-
-.about-story-right{
-  flex: 1;
-}
-
-.about-story-right > img{
-  width:100%;
+  color: $color-blue;
 }
 
 .about-goal{
   max-width: 80%;
   display: flex;
-  border: solid #659DBD 1px;
+  border: solid $color-blue 1px;
   border-radius: 5px;
   gap:1rem;
   padding: 1rem;
@@ -54,7 +38,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: solid #659DBD 1px;
+  border: solid $color-blue 1px;
   border-radius: 5px;
   padding: 1rem;
   gap: 1rem;
@@ -74,7 +58,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  border: solid #659DBD 1px;
+  border: solid $color-blue 1px;
   border-radius: 5px;
   padding: 1rem;
 }
