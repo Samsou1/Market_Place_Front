@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 function Register() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [confirmpd, setConfirmPd] = useState("")
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
@@ -16,18 +17,21 @@ function Register() {
                 password: password
             }
         }
+        if (password === confirmpd) {
         try {
             await APIManager.registerUser(data);
             navigate('/');
         } catch (err) {
             console.error(err)
         }
+    } else { 
+            return  <div> Password do not match </div>
     }
-
+    }
     return (
         <>
-            <h1 className="title-form">Register</h1>
-            <form onSubmit={handleSubmit} className="container-form">
+            <h1 className="register-title">Register</h1>
+            <form onSubmit={handleSubmit} className="register-form-container">
                 <div className='input-container'>
                     <label htmlFor="email">Email </label>
                     <input
@@ -48,11 +52,18 @@ function Register() {
                         placeholder="Password"
                     />
                 </div>
-                <button>Sign Up</button>
-                <div>
-                    <p>Already have an account?</p>
-                    <Link className="link" to='/login' >Log in</Link>
+                <div className='input-container'>
+                    <label htmlFor="password">Confirm Password</label>
+                    <input
+                        onChange={(e) => setConfirmPd(e.target.value)}
+                        value={confirmpd}
+                        type="password"
+                        id="password"
+                        placeholder="Password"
+                    />
                 </div>
+                <button>Sign Up</button>
+                <p>Already have an account? <span><Link className="link" to='/login' >Log in</Link></span></p>
             </form>
         </>
     )
