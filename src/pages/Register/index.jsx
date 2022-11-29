@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 function Register() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [confirmpd, setConfirmPd] = useState("")
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
@@ -16,14 +17,17 @@ function Register() {
                 password: password
             }
         }
+        if (password === confirmpd) {
         try {
             await APIManager.registerUser(data);
             navigate('/');
         } catch (err) {
             console.error(err)
         }
+    } else { 
+            return  <div> Password do not match </div>
     }
-
+    }
     return (
         <>
             <h1 className="register-title">Register</h1>
@@ -43,6 +47,16 @@ function Register() {
                     <input
                         onChange={(e) => setPassword(e.target.value)}
                         value={password}
+                        type="password"
+                        id="password"
+                        placeholder="Password"
+                    />
+                </div>
+                <div className='input-container'>
+                    <label htmlFor="password">Confirm Password</label>
+                    <input
+                        onChange={(e) => setConfirmPd(e.target.value)}
+                        value={confirmpd}
                         type="password"
                         id="password"
                         placeholder="Password"
