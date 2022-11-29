@@ -1,8 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import logo_immo from '../../../src/images/logo.png';
-import { useAtomValue } from 'jotai';
-import { userAtom } from '../../store/user';
 import LogoutButton from '../LogoutButton';
 
 const Navbar = () => {
@@ -27,6 +24,7 @@ window.addEventListener("resize", changeWidth);
 }, [])
   return(
     <header>
+        
       <Link className="link" to='/' ><img src={logo_immo} alt="logo"></img></Link>
       <Link className="link" to='/' ><h1 className='company'>ImmoCorps</h1></Link>
       <nav>
@@ -36,7 +34,7 @@ window.addEventListener("resize", changeWidth);
           <li><Link className="link" to='/about' >About</Link></li>
           <li><Link className="link" to='/login' >Login</Link></li>
           <li><Link className="link" to='/register' >Register</Link></li>
-          <li><Link className="link" to='/apartments' >My Announcements</Link></li>
+          <li><Link className="link" to='/myapartments' >My apartments</Link></li>
           {/* <li><LogoutButton/></li> */}
         </ul>
       )}

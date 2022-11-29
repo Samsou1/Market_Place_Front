@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import APIManager from "../../services/api"
+import { useNavigate } from 'react-router-dom';
 
 const NewApartment = () => {
   const [title, setTitle] = useState('')
@@ -10,11 +11,12 @@ const NewApartment = () => {
   const [address, setAddress] = useState('')
   const [city, setCity] = useState('')
   const [postalCode, setPostalCode] = useState('')
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
-        user: {
+        apartment: {
             title: title,
             description: description,
             price: price,
@@ -26,6 +28,7 @@ const NewApartment = () => {
     }
     try {
         await APIManager.newApartment(data);
+        navigate('/myapartments');
     } catch (err) {
         console.error(err)
     }

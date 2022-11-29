@@ -95,4 +95,33 @@ export default class APIManager {
             throw new Error("Something went wrong");
         }
     }
+
+    static async getMyApartments() {
+        try{
+            const response = await API.get('/apartments?search_term=user');
+            return response.data;
+        }catch{
+            throw new Error("Something went wrong");
+        }
+    }
+
+    static async deleteApartments(id) {
+        try{
+            const response = await API.delete(`/apartments/${id}`);
+            return response.data;
+        }catch{
+            throw new Error("Something went wrong");
+        }
+    }
+    
+    static async updateApartment(id, payload) {
+        try{
+            const response = await API.put(`/apartments/${id}`, payload);
+            return response.data;
+        }catch{
+            throw new Error("Something went wrong");
+        }
+    }
+
+
 }
