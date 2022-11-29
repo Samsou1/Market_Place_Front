@@ -11,7 +11,7 @@ header {
   }
   & .company {
     color: $color-navy;
-    & :hover {
+    &:hover {
       color: $color-whiteblue;
     }
   }
