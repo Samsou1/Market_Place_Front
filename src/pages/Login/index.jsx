@@ -50,7 +50,7 @@ function Login() {
           />
         </div>
         <Link className="login-forgot-password" to='/resetpassword' >Forgot your password?</Link>
-        <button>Log in</button>
+        <input type="submit" value="Login" />
         <div className="login-no-account">
           <p>Don't have an account? <span><Link className="link" to='/register'>Register</Link></span></p>
         </div>
