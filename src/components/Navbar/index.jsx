@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react';
-=======
 import { Link } from 'react-router-dom';
 import logo_immo from '../../../src/images/logo.png';
->>>>>>> main
 import { useAtomValue } from 'jotai';
 import { userAtom } from '../../store/user';
 import LogoutButton from '../LogoutButton';
@@ -31,12 +28,9 @@ window.addEventListener("resize", changeWidth);
 }, [])
   return(
     <header>
-<<<<<<< HEAD
         <Link className="img-nav" to='/' ><img src="../../../public/logo.png" alt="logo"></img></Link>
-=======
       <Link className="link" to='/' ><img src={logo_immo} alt="logo"></img></Link>
       <Link className="link" to='/' ><h1 className='company'>ImmoCorps</h1></Link>
->>>>>>> main
       <nav>
       {(toggleMenu ||largeur > 500) && (
         <ul className='list'>
