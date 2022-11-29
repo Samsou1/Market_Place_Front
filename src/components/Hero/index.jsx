@@ -7,8 +7,8 @@ const Hero = () => {
     <section className='hero-container'>
       <video src={videoBg} muted></video>
       <div>
-        <h1>Bienvenue chez ImmoCorps</h1>
-        <p>Se lancer dans l'immobilier, peut être donné à tout le monde</p>
+        <h1>Welcome to ImmoCorps</h1>
+        <p>Get into real estate, can be given to everyone</p>
         <Link to='/register' >Register</Link>
       </div>
     </section>
