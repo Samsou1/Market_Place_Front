@@ -3,9 +3,10 @@ import ApartmentCards from '../../components/ApartmentCards'
 
 const Home = () => {
   return (
+    <>
       <Hero />
       <ApartmentCards />
-    </div>
+    </>
   )
 }
 
