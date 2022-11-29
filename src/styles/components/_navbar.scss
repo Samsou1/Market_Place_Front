@@ -9,8 +9,11 @@ header {
   & img {
     height: 50px;
   }
-  & h1 {
+  & .company {
     color: $color-navy;
+    & :hover {
+      color: $color-whiteblue;
+    }
   }
   & nav ul {
     display: flex;
@@ -26,8 +29,8 @@ header {
         color: $color-navy;
       }
       &:hover {
-        color: $color-turquoise;
-        border-bottom: 2px solid $color-turquoise;
+        color: $color-whiteblue;
+        border-bottom: 2px solid $color-whiteblue;
       }
     }
   }

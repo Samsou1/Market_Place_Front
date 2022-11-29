@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import videoBg from '../../../public/videoBg.mp4'
+import videoBg from '../../videos/videoBg.mp4'
 
 const Hero = () => {
   return (
