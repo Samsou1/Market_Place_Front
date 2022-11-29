@@ -35,7 +35,6 @@ const EditApartment = () => {
   }
 
   const SetAll = (apartment) => {
-    console.log(apartment)
     apartment.title? setTitle(apartment.title): setTitle("");
     apartment.description? setDescription(apartment.description): setDescription("");
     apartment.price? setPrice(apartment.price): setPrice("");
