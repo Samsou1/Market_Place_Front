@@ -54,17 +54,24 @@ header {
   font-size: 18px;
 }
 
+.link {
+  margin: 0 15px;
+  
+  color: #f1f1f1;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 500px) {
   header {
      flex-direction: column;
-     height: 100px;
+     height: 150px;
   }
   .link:nth-child(1){
-    margin-top: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   .link {
-
-    line-height: 50px;
+    line-height: 5px;
     text-align: center;
   }
   .btn {
