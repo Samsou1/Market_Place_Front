@@ -25,21 +25,22 @@ window.addEventListener("resize", changeWidth);
 }, [])
   return(
     <header>
-        
-      <Link className="link" to='/' ><img src={logo_immo} alt="logo"></img></Link>
-      <Link className="link" to='/' ><h1 className='company'>ImmoCorps</h1></Link>
+      <div>
+        <Link to='/' ><img src={logo_immo} alt="logo"></img></Link>
+        <Link to='/' ><h1 className='company'>ImmoCorps</h1></Link>
+      </div>
       <nav>
-      {(toggleMenu ||largeur > 500) && (
+      {(toggleMenu || largeur > 768) && (
         <ul className='list'>
-          <li><Link className="link" to='/' >Home</Link></li>
-          <li><Link className="link" to='/about' >About</Link></li>
-          <li><Link className="link" to='/login' >Login</Link></li>
-          <li><Link className="link" to='/register' >Register</Link></li>
-          <li><Link className="link" to='/myapartments' >My apartments</Link></li>
-          {/* <li><LogoutButton/></li> */}
+          <li><Link to='/'>Home</Link></li>
+          <li><Link to='/about'>About</Link></li>
+          <li><Link to='/myapartments'>Apartments</Link></li>
+          <li><Link to='/login'>Login</Link></li>
+          <li><Link to='/register'>Register</Link></li>
+          <li><LogoutButton /></li>
         </ul>
       )}
-       <button onClick={toggleNav} className="btn">☰</button>
+       <button onClick={toggleNav} className="toggle-button">MENU</button>
       </nav>
     </header>
   )
