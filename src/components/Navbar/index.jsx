@@ -27,6 +27,7 @@ window.addEventListener("resize", changeWidth);
     <header>
       <Link className="link" to='/' ><img src="../../../public/logo.png" alt="logo"></img></Link>
       <nav>
+      {(toggleMenu ||largeur > 500) && (
         <ul>
           <li><Link className="link" to='/' >Home</Link></li>
           <li><Link className="link" to='/about' >About</Link></li>
@@ -34,6 +35,8 @@ window.addEventListener("resize", changeWidth);
           <li><Link className="link" to='/register' >Register</Link></li>
           {/* <li><LogoutButton/></li> */}
         </ul>
+      )}
+       <button onClick={toggleNav} className="btn">☰</button>
       </nav>
     </header>
   )
