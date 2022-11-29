@@ -113,6 +113,15 @@ export default class APIManager {
             throw new Error("Something went wrong");
         }
     }
+    
+    static async updateApartment(id, payload) {
+        try{
+            const response = await API.put(`/apartments/${id}`, payload);
+            return response.data;
+        }catch{
+            throw new Error("Something went wrong");
+        }
+    }
 
 
 }
