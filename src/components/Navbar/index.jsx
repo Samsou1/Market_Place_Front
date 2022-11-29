@@ -11,7 +11,18 @@ const toggleNav = () => {
   setToggleMenu(!toggleMenu)
 }
 
+useEffect(()=> {
 
+  const changeWidth = () => {
+    setLargeur(window.innerWidth);
+  }
+window.addEventListener("resize", changeWidth);
+
+
+  return () => {
+    window.removeEventListener("resize", changeWidth);
+  }
+}, [])
   return(
     <header>
       <Link className="link" to='/' ><img src="../../../public/logo.png" alt="logo"></img></Link>
