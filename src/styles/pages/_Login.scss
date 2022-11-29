@@ -10,11 +10,11 @@ main {
 
 .login-form-container {
   & input {
-    border: 1px solid black;
+    border: 1px solid $color-navy;
     padding: 12px 20px;
     margin: 8px 0;
     &[type="submit"] {
-      background-color: #1B4965;
+      background-color: $color-navy;
       color: white;
       padding: 15px 0;
       margin: 15px 0;
@@ -24,7 +24,7 @@ main {
       cursor: pointer;
       &:hover {
         transition-duration: 0.2s;
-        background-color: #5FA8D3;
+        background-color: $color-blue
       }
     }
   }
