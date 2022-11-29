@@ -1,7 +1,7 @@
-import { useState } from 'react'
-import APIManager from "../../services/api"
+import { useState } from 'react';
+import APIManager from "../../services/api";
 import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 function Register() {
     const [email, setEmail] = useState("")
@@ -62,7 +62,7 @@ function Register() {
                         placeholder="Password"
                     />
                 </div>
-                <button>Sign Up</button>
+                <input type="submit" value="Register" />
                 <p>Already have an account? <span><Link className="link" to='/login' >Log in</Link></span></p>
             </form>
         </>
