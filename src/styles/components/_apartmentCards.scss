@@ -1,12 +1,50 @@
-.apartmentCards{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
-  grid-auto-rows: minmax(100px, auto);
+@import "../base/variables";
+
+.apartement-cards-container {
+  width: 90%;
+  & div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
+    grid-gap: 1rem;
+  }
 }
 
 .apartmentCard{
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
   text-align: center;
+  & div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    & a {
+      background-color: #1B4965;
+      color: white;
+      padding: 15px 0;
+      margin: 15px 0;
+      border: none;
+      border-radius: 8px;
+      width: 175px;
+      cursor: pointer;
+      &:hover {
+        transition-duration: 0.2s;
+        background-color: #5FA8D3;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-medium-devices) {
+  .apartement-cards-container {
+    & div {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+  }
+}
+
+@media (min-width: $breakpoint-large-devices) {
+  .apartement-cards-container {
+    & div {
+      grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+    }
+  }
 }
