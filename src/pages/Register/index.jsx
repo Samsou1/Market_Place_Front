@@ -1,7 +1,7 @@
-import { useState } from 'react'
-import APIManager from "../../services/api"
+import { useState } from 'react';
+import APIManager from "../../services/api";
 import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 function Register() {
     const [email, setEmail] = useState("")

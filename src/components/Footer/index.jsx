@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer>Footer</footer>
+    <footer>
+      <Link className="link" to='/' ><p className='company'>ImmoCorps</p></Link>
+    </footer>
   )
 }
 
