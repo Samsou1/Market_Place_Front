@@ -13,6 +13,7 @@ const Navbar = () => {
           <li><Link className="link" to='/about' >About</Link></li>
           <li><Link className="link" to='/login' >Log in</Link></li>
           <li><Link className="link" to='/register' >Register</Link></li>
+          <li><Link className="link" to='/myapartments' >My apartments</Link></li>
           {/* <li><LogoutButton/></li> */}
         </ul>
       </nav>

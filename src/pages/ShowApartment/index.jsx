@@ -3,6 +3,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import APIManager from "../../services/api";
 import { Link } from 'react-router-dom';
+import DeleteApartmentButton from '../../components/DeleteApartmentButton';
 
 const ApartmentView = () => {
   const [apartment, setApartment] = useState({});
@@ -29,7 +30,7 @@ const ApartmentView = () => {
         <p>Postal code: {apartment.postal_code}</p>
         <p>Contact: {apartment.user.email}</p>
         <Link className="link" to={`/editapartment/${apartment.id}`} >Edit</Link>
-        <button>Delete</button>
+        <DeleteApartmentButton/>
       </div>
     )
   }else{

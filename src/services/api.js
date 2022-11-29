@@ -107,7 +107,7 @@ export default class APIManager {
 
     static async deleteApartments(id) {
         try{
-            const response = await API.delete('/apartments', id);
+            const response = await API.delete(`/apartments/${id}`);
             return response.data;
         }catch{
             throw new Error("Something went wrong");
