@@ -13,19 +13,19 @@ main {
     border: 1px solid black;
     padding: 12px 20px;
     margin: 8px 0;
-  }
-  & button {
-    background-color: #1B4965;
-    color: white;
-    padding: 15px 0;
-    margin: 5px 0 10px 0;
-    border: none;
-    border-radius: 8px;
-    width: 100%;
-    cursor: pointer;
-    &:hover {
-      transition-duration: 0.2s;
-      background-color: #5FA8D3;
+    &[type="submit"] {
+      background-color: #1B4965;
+      color: white;
+      padding: 15px 0;
+      margin: 5px 0 10px 0;
+      border: none;
+      border-radius: 8px;
+      width: 100%;
+      cursor: pointer;
+      &:hover {
+        transition-duration: 0.2s;
+        background-color: #5FA8D3;
+      }
     }
   }
 }
