@@ -4,10 +4,16 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 55px;
-  background-color: #5FA8D3;
+  background-color: $color-blue;
   height: 80px;
   & img {
     height: 50px;
+  }
+  & .company {
+    color: $color-navy;
+    & :hover {
+      color: $color-whiteblue;
+    }
   }
   & nav ul {
     display: flex;
@@ -17,14 +23,14 @@ header {
     & li a {
       letter-spacing: 0.2px;
       &:link {
-        color: #242582;
+        color: $color-navy;
       }
       &:visited {
-        color: #242582;
+        color: $color-navy;
       }
       &:hover {
-        color: #242582;
-        border-bottom: 2px solid #242582;
+        color: $color-whiteblue;
+        border-bottom: 2px solid $color-whiteblue;
       }
     }
   }
