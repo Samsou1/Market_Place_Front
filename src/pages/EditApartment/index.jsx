@@ -78,7 +78,7 @@ const EditApartment = () => {
         <input
           onChange={(e) => setPrice(e.target.value)}
           value={price}
-          type="text"
+          type="number"
           id="price"
           placeholder="Price"
         />
@@ -88,7 +88,7 @@ const EditApartment = () => {
         <input
           onChange={(e) => setSurface(e.target.value)}
           value={surface}
-          type="text"
+          type="number"
           id="surface"
           placeholder="Surface"
         />

@@ -16,6 +16,7 @@ import NewApartment from './pages/NewApartment';
 import MyApartments from './pages/MyApartments';
 import EditApartment from './pages/EditApartment';
 import Profile from './pages/Profile';
+import EditProfile from './pages/EditProfile';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path='/myapartments' element={<MyApartments />} />
             <Route path='/editapartment/:id' element={<EditApartment />} />
             <Route path='/profile' element={<Profile />} />
+            <Route path='/editprofile' element={<EditProfile />} />
           </Route>
         </Routes>
       </main>

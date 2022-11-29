@@ -78,10 +78,10 @@ export default class APIManager {
         }
     }
 
-    static async getUser(id = JSON.parse(Cookies.get("currentUser")).id) {
+    static async getUser() {
         try{
-            const response = await API.get(`/users/${id}`);
-            return response.data;
+            const response = await API.get(`/member-data`);
+            return response.data.user;
         }catch{
             throw new Error("Something went wrong");
         }

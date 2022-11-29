@@ -1,8 +1,7 @@
 import APIManager from "../../services/api";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
-const Profile = () => {
+const EditProfile = () => {
   const [user, setUser] = useState("");
 
   useEffect(() => {
@@ -11,14 +10,8 @@ const Profile = () => {
   }, [])
 
   return (
-    <div>
-      <h2>Profile</h2>
-      <p>Email: {user.email}</p>
-      <p>Last name: {user.first_name}</p>
-      <p>First name: {user.last_name}</p>
-      <Link className="link" to='/edituser' >Edit user</Link>
-    </div>
+    <div>EditProfile</div>
   )
 }
 
-export default Profile;
+export default EditProfile
