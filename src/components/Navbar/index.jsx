@@ -4,6 +4,14 @@ import { userAtom } from '../../store/user';
 import LogoutButton from '../LogoutButton';
 
 const Navbar = () => {
+const [toggleMenu, setToggleMenu] = useState(false);
+const [largeur, setLargeur] = useState(window.innerWidth);
+
+const toggleNav = () => {
+  setToggleMenu(!toggleMenu)
+}
+
+
   return(
     <header>
       <Link className="link" to='/' ><img src="../../../public/logo.png" alt="logo"></img></Link>
