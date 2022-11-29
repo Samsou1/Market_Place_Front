@@ -8,7 +8,7 @@ const Hero = () => {
       <video src={videoBg} muted></video>
       <div>
         <h1>Welcome to ImmoCorps</h1>
-        <p>Get into real estate, can be given to everyone</p>
+        <p>Get into real estate, can be given to everyone!</p>
         <Link to='/register' >Register</Link>
       </div>
     </section>
