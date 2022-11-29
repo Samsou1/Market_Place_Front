@@ -13,7 +13,7 @@ header {
     display: flex;
     align-items: center;
     list-style-type: none;
-    gap: 10px;
+   
     & li a {
       letter-spacing: 0.2px;
       &:link {
@@ -29,3 +29,39 @@ header {
     }
   }
 }
+
+.list {
+  gap: 0.5rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.btn {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  padding: 5px;
+  color: #000;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 500px) {
+  header {
+     flex-direction: column;
+     height: 100px;
+  }
+  .link:nth-child(1){
+    margin-top: 50px;
+  }
+  .link {
+
+    line-height: 50px;
+    text-align: center;
+  }
+  .btn {
+    display:block;
+  }
+};
