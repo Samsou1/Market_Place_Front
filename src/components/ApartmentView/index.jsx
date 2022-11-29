@@ -11,10 +11,6 @@ const ApartmentView = () => {
     fetchApartment().catch(console.error);
   }, [])
 
-  useEffect(() => {
-    console.log(apartment)
-  },[apartment])
-
   if(!apartment.user){
     return <h2>No apartment with such id</h2>
   }
