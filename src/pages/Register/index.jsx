@@ -53,12 +53,12 @@ function Register() {
                     />
                 </div>
                 <div className='input-container'>
-                    <label htmlFor="password">Confirm Password</label>
+                    <label htmlFor="confirmPassword">Confirm Password</label>
                     <input
                         onChange={(e) => setConfirmPd(e.target.value)}
                         value={confirmpd}
                         type="password"
-                        id="password"
+                        id="confirmPassword"
                         placeholder="Password"
                     />
                 </div>
