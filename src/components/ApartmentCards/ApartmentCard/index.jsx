@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
-const ApartmentCard = ({apartment}) => {
+const ApartmentCard = ({ apartment }) => {
   return (
     <div className='apartmentCard'>
       <h3>Title:{apartment.title}</h3>
@@ -12,4 +12,4 @@ const ApartmentCard = ({apartment}) => {
   )
 }
 
-export default ApartmentCard
+export default ApartmentCard;

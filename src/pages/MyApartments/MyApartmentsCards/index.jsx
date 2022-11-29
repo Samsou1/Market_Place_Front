@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const MyApartmentsCards = ({apartment}) => {
+const MyApartmentsCards = ({ apartment }) => {
   return (
     <div className='apartmentCard'>
       <h3>Title:{apartment.title}</h3>

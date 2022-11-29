@@ -35,18 +35,18 @@ const EditApartment = () => {
   }
 
   const SetAll = (apartment) => {
-    apartment.title? setTitle(apartment.title): setTitle("");
-    apartment.description? setDescription(apartment.description): setDescription("");
-    apartment.price? setPrice(apartment.price): setPrice("");
-    apartment.surface? setSurface(apartment.surface): setSurface("");
-    apartment.address? setAddress(apartment.address): setAddress("");
-    apartment.city? setCity(apartment.city):setCity("");
-    apartment.postal_code? setPostalCode(apartment.postal_code):setPostalCode("");
+    apartment.title ? setTitle(apartment.title) : setTitle("");
+    apartment.description ? setDescription(apartment.description) : setDescription("");
+    apartment.price ? setPrice(apartment.price) : setPrice("");
+    apartment.surface ? setSurface(apartment.surface) : setSurface("");
+    apartment.address ? setAddress(apartment.address) : setAddress("");
+    apartment.city ? setCity(apartment.city) : setCity("");
+    apartment.postal_code ? setPostalCode(apartment.postal_code) : setPostalCode("");
   }
 
   useEffect(() => {
     const id = window.location.pathname.split('/')[2];
-    const fetchApartment = async () => {await APIManager.getApartment(id).then(data => SetAll(data))};
+    const fetchApartment = async () => { await APIManager.getApartment(id).then(data => SetAll(data)) };
     fetchApartment().catch(console.error);
   }, [])
 

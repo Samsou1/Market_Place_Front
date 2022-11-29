@@ -5,7 +5,6 @@ const About = () => {
     <div className='about'>
       <h1>About</h1>
       <div className='about-story'>
-        
         <div className="about-story-left">
           <h2>Story</h2>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ad architecto maxime aliquid tenetur, sint commodi repudiandae omnis a consectetur magnam, veniam velit? Obcaecati incidunt perspiciatis eaque autem vero. Iure?</p>

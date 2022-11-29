@@ -78,7 +78,7 @@ export default class APIManager {
         }
     }
 
-    static async getUser(id) {
+    static async getUser(id = JSON.parse(Cookies.get("currentUser")).id) {
         try{
             const response = await API.get(`/users/${id}`);
             return response.data;
@@ -113,7 +113,7 @@ export default class APIManager {
             throw new Error("Something went wrong");
         }
     }
-    
+
     static async updateApartment(id, payload) {
         try{
             const response = await API.put(`/apartments/${id}`, payload);

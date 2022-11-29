@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 function Register() {
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-    const [confirmpd, setConfirmPd] = useState("")
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [confirmpd, setConfirmPd] = useState("");
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
@@ -18,15 +18,15 @@ function Register() {
             }
         }
         if (password === confirmpd) {
-        try {
-            await APIManager.registerUser(data);
-            navigate('/');
-        } catch (err) {
-            console.error(err)
+            try {
+                await APIManager.registerUser(data);
+                navigate('/');
+            } catch (err) {
+                console.error(err)
+            }
+        } else {
+            return <div> Password do not match </div>
         }
-    } else { 
-            return  <div> Password do not match </div>
-    }
     }
     return (
         <>
@@ -68,4 +68,5 @@ function Register() {
         </>
     )
 }
-export default Register
+
+export default Register;

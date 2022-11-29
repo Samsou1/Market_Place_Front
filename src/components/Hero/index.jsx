@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
-import videoBg from '../../videos/videoBg.mp4'
+import { Link } from 'react-router-dom';
+import videoBg from '../../videos/videoBg.mp4';
 
 const Hero = () => {
   return (
@@ -15,4 +15,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default Hero;

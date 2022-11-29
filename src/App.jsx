@@ -3,10 +3,10 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
-import PrivateRoute from './config/PrivateRoute'
-import Home from './pages/Home'
-import About from './pages/About'
-import Navbar from './components/Navbar'
+import PrivateRoute from './config/PrivateRoute';
+import Home from './pages/Home';
+import About from './pages/About';
+import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -15,6 +15,7 @@ import ApartmentView from './pages/ShowApartment';
 import NewApartment from './pages/NewApartment';
 import MyApartments from './pages/MyApartments';
 import EditApartment from './pages/EditApartment';
+import Profile from './pages/Profile';
 
 function App() {
   return (
@@ -23,8 +24,8 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path='/register' element={<Register />} /> 
-          <Route path='/login' element={<Login />} /> 
+          <Route path='/register' element={<Register />} />
+          <Route path='/login' element={<Login />} />
           <Route path='/about' element={<About />} />
           <Route path='/resetpassword' element={<Resetpassword />} />
           <Route path='/apartments/:id' element={<ApartmentView />} />
@@ -32,12 +33,13 @@ function App() {
             <Route path='/newapartment' element={<NewApartment />} />
             <Route path='/myapartments' element={<MyApartments />} />
             <Route path='/editapartment/:id' element={<EditApartment />} />
+            <Route path='/profile' element={<Profile />} />
           </Route>
         </Routes>
       </main>
-      <Footer/>
+      <Footer />
     </BrowserRouter>
   )
 }
 
-export default App
+export default App;
