@@ -86,4 +86,13 @@ export default class APIManager {
             throw new Error("Something went wrong");
         }
     }
+
+    static async newApartment(payload) {
+        try{
+            const response = await API.post(`/apartments`, payload);
+            return response;
+        }catch{
+            throw new Error("Something went wrong");
+        }
+    }
 }

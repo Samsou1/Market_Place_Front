@@ -12,6 +12,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Resetpassword from './pages/ResetPassword'
 import ApartmentView from './components/ApartmentView';
+import NewApartment from './pages/NewApartment';
 
 function App() {
   return (
@@ -25,10 +26,8 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/resetpassword' element={<Resetpassword />} />
           <Route path='/apartments/:id' element={<ApartmentView />} />
-
           <Route element={<PrivateRoute />}>
-
-
+            <Route path='/newapartment' element={<NewApartment />} />
           </Route>
         </Routes>
       </main>
