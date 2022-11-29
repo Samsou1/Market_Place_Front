@@ -1,10 +1,4 @@
-$color-blue: #5fa8d3;
-$color-sky:#bee9e8;
-$color-whiteblue:#cae9ff;
-$color-turquoise: #62b6cb;
-$color-navy:#1b4965;
-$font-family-title: 'Urbanist', sans-serif;
-$font-family-content: 'Red Hat Text', sans-serif;
+@import "../base/variables";
 
 html{
   height: 100%;

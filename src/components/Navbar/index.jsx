@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logo_immo from '../../../src/images/logo.png';
-// import LogoutButton from '../LogoutButton';
+import LogoutButton from '../LogoutButton';
 
 const Navbar = () => {
 const [toggleMenu, setToggleMenu] = useState(false);
@@ -25,20 +25,21 @@ window.addEventListener("resize", changeWidth);
 }, [])
   return(
     <header>  
-      <Link className="link" to='/' ><img src={logo_immo} alt="logo"></img></Link>
-      <Link className="link" to='/' ><h1 className='company'>ImmoCorps</h1></Link>
+      <div>
+        <Link to='/' ><img src={logo_immo} alt="logo"></img></Link>
+        <Link to='/' ><h1 className='company'>ImmoCorps</h1></Link>
+      </div>
       <nav>
-        {(toggleMenu ||largeur > 500) && (
+        {(toggleMenu || largeur > 768) && (
           <ul className='list'>
-            <li><Link className="link" to='/' >Home</Link></li>
-            <li><Link className="link" to='/about' >About</Link></li>
-            <li><Link className="link" to='/login' >Login</Link></li>
-            <li><Link className="link" to='/register' >Register</Link></li>
-            <li><Link className="link" to='/myapartments' >My apartments</Link></li>
-            {/* <li><LogoutButton/></li> */}
+            <li><Link to='/'>Home</Link></li>
+            <li><Link to='/about'>About</Link></li>
+            <li><Link to='/myapartments'>Apartments</Link></li>
+            <li><Link to='/login'>Login</Link></li>
+            <li><Link to='/register'>Register</Link></li>
+            <li><LogoutButton /></li>
           </ul>
         )}
-        {/* <button onClick={toggleNav} className="btn">☰</button> */}
         <svg>
           <defs>
             <filter id="gooeyness">
@@ -48,7 +49,7 @@ window.addEventListener("resize", changeWidth);
             </filter>
           </defs>
         </svg>
-        <div onClick={toggleNav} className="plate">
+        <div onClick={toggleNav} className="toggle-button">
           <svg className="burger" version="1.1" height="100" width="100" viewBox="0 0 100 100">
             <path className="line line1" d="M 50,65 H 70 C 70,65 75,65.198488 75,70.762712 C 75,73.779026 74.368822,78.389831 66.525424,78.389831 C 22.092231,78.389831 -18.644068,-30.508475 -18.644068,-30.508475" />
             <path className="line line2" d="M 50,35 H 70 C 70,35 81.355932,35.300135 81.355932,25.635593 C 81.355932,20.906215 78.841706,14.830508 72.881356,14.830508 C 35.648232,14.830508 -30.508475,84.322034 -30.508475,84.322034" />

@@ -12,14 +12,14 @@ const ApartmentCards = () => {
   },[])
 
   return (
-    <div className=''>
+    <section className='apartement-cards-container'>
       <h2>Our selection of apartments:</h2>
       <div className='apartmentCards'>
         {apartments.map(apartment => {
           return <ApartmentCard key={apartment.id + apartment.title} apartment={apartment}/>
         })}
       </div>
-    </div>
+    </section>
   )
 }
 

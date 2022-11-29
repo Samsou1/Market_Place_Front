@@ -7,7 +7,9 @@ const ApartmentCard = ({apartment}) => {
       <p>Price:{apartment.price}</p>
       <p>Description:{apartment.description}</p>
       <p>TODO: PICTURE</p>
-      <Link className="link" to={`/apartments/${apartment.id}`}>Have a look</Link>
+      <div>
+        <Link className="link" to={`/apartments/${apartment.id}`}>Have a look</Link>
+      </div>
     </div>
   )
 }
