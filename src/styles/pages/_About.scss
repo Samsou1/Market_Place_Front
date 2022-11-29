@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  margin: 1rem;
+  margin: 2rem;
   color: $color-blue;
 }
 
@@ -20,6 +20,8 @@ h1, h2, h3, h4, h5, h6 {
 .about-goal{
   max-width: 80%;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   border: solid $color-blue 1px;
   border-radius: 5px;
   gap: 1rem;
@@ -28,6 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-goal-left{
   flex: 1;
+  justify-content: center;
 }
 
 .about-goal-left > img{
