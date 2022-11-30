@@ -28,7 +28,7 @@ const Navbar = () => {
         <Link to='/' ><h1 className='company'>ImmoCorps</h1></Link>
       </div>
       <nav>
-        {(toggleMenu || largeur > 768) && (
+        {(toggleMenu || width > 768) && (
           <ul className='list'>
             <li><Link to='/'>Home</Link></li>
             <li><Link to='/about'>About</Link></li>
