@@ -1,25 +1,24 @@
-import { useState } from 'react'
+import { useState } from "react";
 import APIManager from "../../services/api";
-import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Login() {
   const navigate = useNavigate();
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
       user: {
         email: email,
-        password: password
+        password: password,
       },
     };
     try {
       await APIManager.loginUser(data);
-      navigate('/');
+      navigate("/");
     } catch (err) {
       console.error(err);
     }
@@ -29,7 +28,7 @@ function Login() {
     <>
       <h1 className="login-title">Login</h1>
       <form onSubmit={handleSubmit} className="login-form-container">
-        <div className='input-container'>
+        <div className="input-container">
           <label htmlFor="username">Email</label>
           <input
             onChange={(e) => setEmail(e.target.value)}
@@ -37,9 +36,9 @@ function Login() {
             type="text"
             id="email"
             placeholder="Email"
-            />
+          />
         </div>
-        <div className='input-container'>
+        <div className="input-container">
           <label htmlFor="password">Password</label>
           <input
             onChange={(e) => setPassword(e.target.value)}
@@ -49,15 +48,23 @@ function Login() {
             placeholder="Password"
           />
         </div>
-        <Link className="login-forgot-password" to='/resetpassword' >Forgot your password?</Link>
+        <Link className="login-forgot-password" to="/resetpassword">
+          Forgot your password?
+        </Link>
         <input type="submit" value="Login" />
         <div className="login-no-account">
-          <p>Don't have an account? <span><Link className="link" to='/register'>Register</Link></span></p>
+          <p>
+            Don't have an account?{" "}
+            <span>
+              <Link className="link" to="/register">
+                Register
+              </Link>
+            </span>
+          </p>
         </div>
       </form>
     </>
   );
 }
 
-
-export default Login
+export default Login;

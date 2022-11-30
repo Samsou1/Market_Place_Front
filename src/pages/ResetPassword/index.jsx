@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import APIManager from "../../services/api"
+import { useState } from 'react';
+import APIManager from "../../services/api";
 import { useNavigate } from 'react-router-dom';
 
 const ResetPassword = () => {
@@ -20,6 +20,7 @@ const ResetPassword = () => {
       console.error(err)
     }
   }
+
   return (
     <>
       <h1 className="title-form">Reset your password</h1>
@@ -40,4 +41,4 @@ const ResetPassword = () => {
   )
 }
 
-export default ResetPassword
+export default ResetPassword;

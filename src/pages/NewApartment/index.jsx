@@ -1,43 +1,42 @@
-import React from 'react'
 import { useState } from 'react';
-import APIManager from "../../services/api"
+import APIManager from "../../services/api";
 import { useNavigate } from 'react-router-dom';
 
 const NewApartment = () => {
-  const [title, setTitle] = useState('')
-  const [description, setDescription] = useState('')
-  const [price, setPrice] = useState('')
-  const [surface, setSurface] = useState('')
-  const [address, setAddress] = useState('')
-  const [city, setCity] = useState('')
-  const [postalCode, setPostalCode] = useState('')
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [price, setPrice] = useState('');
+  const [surface, setSurface] = useState('');
+  const [address, setAddress] = useState('');
+  const [city, setCity] = useState('');
+  const [postalCode, setPostalCode] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
-        apartment: {
-            title: title,
-            description: description,
-            price: price,
-            surface: surface,
-            address: address,
-            city: city,
-            postal_code: postalCode
-        }
+      apartment: {
+        title: title,
+        description: description,
+        price: price,
+        surface: surface,
+        address: address,
+        city: city,
+        postal_code: postalCode
+      }
     }
     try {
-        await APIManager.newApartment(data);
-        navigate('/myapartments');
+      await APIManager.newApartment(data);
+      navigate('/myapartments');
     } catch (err) {
-        console.error(err)
+      console.error(err);
     }
-}
+  }
 
   return (
     <>
-            <h1 className="title-form">New apartment ad</h1>
-            <form onSubmit={handleSubmit} className="container-form">
+            <h1 className="new-title">New apartment ad </h1>
+            <form onSubmit={handleSubmit} className="new-container-form">
                 <div className='input-container'>
                     <label htmlFor="title">Title</label>
                     <input
@@ -109,10 +108,10 @@ const NewApartment = () => {
                     />
                 </div>
                 {/* TODO: do the same with other optional fields */}
-                <button>Begin the journey!</button>
+                <input type="submit" value="Begin" />
             </form>
         </>
   )
 }
 
-export default NewApartment
+export default NewApartment;
