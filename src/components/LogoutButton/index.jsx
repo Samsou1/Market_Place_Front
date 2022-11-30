@@ -1,5 +1,5 @@
-import APIManager from "../../services/api"
-import { useNavigate } from 'react-router-dom';
+import APIManager from "../../services/api";
+import { useNavigate } from "react-router-dom";
 
 const LogoutButton = () => {
   const navigate = useNavigate();
@@ -8,15 +8,17 @@ const LogoutButton = () => {
     e.preventDefault();
     try {
       await APIManager.logoutUser();
-      navigate('/');
+      navigate("/");
     } catch (error) {
       console.error(error);
     }
-  }
+  };
 
   return (
-    <button onClick={handleClick} className="logout-button">Log out</button>
-  )
-}
+    <button onClick={handleClick} className="logout-button">
+      Log out
+    </button>
+  );
+};
 
 export default LogoutButton;
