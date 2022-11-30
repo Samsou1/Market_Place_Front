@@ -36,8 +36,8 @@ const NewApartment = () => {
 
   return (
     <>
-            <h1 className="title-form">New apartment ad</h1>
-            <form onSubmit={handleSubmit} className="container-form">
+            <h1 className="new-title">New apartment ad </h1>
+            <form onSubmit={handleSubmit} className="new-container-form">
                 <div className='input-container'>
                     <label htmlFor="title">Title</label>
                     <input
@@ -109,7 +109,7 @@ const NewApartment = () => {
                     />
                 </div>
                 {/* TODO: do the same with other optional fields */}
-                <button>Begin the journey!</button>
+                <input type="submit" value="Begin" />
             </form>
         </>
   )
