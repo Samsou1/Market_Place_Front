@@ -1,0 +1,53 @@
+main {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-title {
+  margin-bottom: 35px;
+}
+
+.new-title-1{
+  margin-top: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.new-container-form {
+  & input {
+    border: 1px solid $color-navy;
+    padding: 12px 20px;
+    margin: 8px 0;
+    &[type="submit"] {
+      background-color: $color-navy;
+      color: #fff;
+      padding: 15px 0;
+      margin: 5px 0 15px 0;
+      border: none;
+      border-radius: 8px;
+      width: 50%;
+      cursor: pointer;
+      &:hover {
+        transition-duration: 0.2s;
+        background-color: $color-blue;
+      }
+    }
+  }
+}
+
+#title, #city, #address{
+  width: 40%;
+}
+
+#price, #postalCode, #surface {
+  width: 30%;
+}
+
+$breakpoint-tablet: 768px;
+@media (min-width: $breakpoint-tablet) {
+  .new-container-form {
+    min-width: 400px;
+  }
+}
+
