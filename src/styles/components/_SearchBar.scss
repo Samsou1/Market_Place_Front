@@ -1,8 +1,19 @@
 .search-container-form {
   & input {
+    font-family: $font-family-content;
+    font-size: medium;
     border: 1px solid $color-navy;
+    border-radius: 20px;
     padding: 8px 20px;
-    margin-top: 1.5rem;
+    margin-top: 1.2rem;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+    &:hover {
+      border: 2px solid $color-navy;
+    }
+    &:focus {
+      outline: none;      
+    }
   }
   }
   
