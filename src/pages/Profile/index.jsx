@@ -16,7 +16,7 @@ const Profile = () => {
       <p>Email: {user.email}</p>
       <p>Last name: {user.first_name}</p>
       <p>First name: {user.last_name}</p>
-      <Link className="link" to='/edituser' >Edit user</Link>
+      <Link className="link" to='/editprofile' >Edit profile</Link>
     </div>
   )
 }

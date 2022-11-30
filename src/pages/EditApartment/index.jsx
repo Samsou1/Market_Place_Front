@@ -27,7 +27,7 @@ const EditApartment = () => {
     }
     try {
       const id = window.location.pathname.split('/')[2];
-      await APIManager.updateApartment(id, data);
+      await APIManager.editApartment(id, data);
       navigate('/myapartments');
     } catch (err) {
       console.error(err)
