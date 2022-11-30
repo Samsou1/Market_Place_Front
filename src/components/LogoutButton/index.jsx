@@ -6,16 +6,16 @@ const LogoutButton = () => {
 
   const handleClick = async (e) => {
     e.preventDefault();
-    try{
+    try {
       await APIManager.logoutUser();
       navigate('/');
-    }catch(error){
+    } catch (error) {
       console.error(error);
     }
   }
 
   return (
-      <button onClick={handleClick} className="logout-button">Log out</button>
+    <button onClick={handleClick} className="logout-button">Log out</button>
   )
 }
 

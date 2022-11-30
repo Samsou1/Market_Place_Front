@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-const MyApartmentsCards = ({apartment}) => {
+const MyApartmentsCards = ({ apartment }) => {
   return (
     <div className='apartmentCard'>   
       <div class="product-details">    

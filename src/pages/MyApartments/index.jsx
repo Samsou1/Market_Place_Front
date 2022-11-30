@@ -1,16 +1,15 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
-import MyApartmentsCards from './MyApartmentsCards'
-import APIManager from '../../services/api'
-import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react';
+import MyApartmentsCards from './MyApartmentsCards';
+import APIManager from '../../services/api';
+import { Link } from 'react-router-dom';
 
 const MyApartments = () => {
-  const [apartments, setApartments] = useState([])
+  const [apartments, setApartments] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {await APIManager.getMyApartments().then(data => setApartments(data))};
+    const fetchData = async () => { await APIManager.getMyApartments().then(data => setApartments(data)) };
     fetchData().catch(console.error);
-  },[])
+  }, [])
 
   return (
   <section className='apartement-cards-container'>
@@ -28,4 +27,4 @@ const MyApartments = () => {
   )
 }
 
-export default MyApartments
+export default MyApartments;

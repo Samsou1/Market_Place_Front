@@ -78,10 +78,10 @@ export default class APIManager {
         }
     }
 
-    static async getUser(id) {
+    static async getUser() {
         try{
-            const response = await API.get(`/users/${id}`);
-            return response.data;
+            const response = await API.get(`/member-data`);
+            return response.data.user;
         }catch{
             throw new Error("Something went wrong");
         }
@@ -113,10 +113,19 @@ export default class APIManager {
             throw new Error("Something went wrong");
         }
     }
-    
-    static async updateApartment(id, payload) {
+
+    static async editApartment(id, payload) {
         try{
             const response = await API.put(`/apartments/${id}`, payload);
+            return response.data;
+        }catch{
+            throw new Error("Something went wrong");
+        }
+    }
+
+    static async editProfile(payload) {
+        try{
+            const response = await API.patch(`/member-update`, payload);
             return response.data;
         }catch{
             throw new Error("Something went wrong");

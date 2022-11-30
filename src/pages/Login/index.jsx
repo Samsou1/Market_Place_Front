@@ -5,10 +5,9 @@ import { Link } from 'react-router-dom'
 
 function Login() {
   const navigate = useNavigate();
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
@@ -37,7 +36,7 @@ function Login() {
             type="text"
             id="email"
             placeholder="Email"
-            />
+          />
         </div>
         <div className='input-container'>
           <label htmlFor="password">Password</label>

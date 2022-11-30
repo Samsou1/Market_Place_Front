@@ -1,7 +1,6 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import APIManager from '../../services/api';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const DeleteApartmentButton = () => {
   const navigate = useNavigate();
@@ -21,4 +20,4 @@ const DeleteApartmentButton = () => {
   )
 }
 
-export default DeleteApartmentButton
+export default DeleteApartmentButton;
