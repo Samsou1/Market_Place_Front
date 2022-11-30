@@ -8,7 +8,7 @@ footer {
   height: 80px;
   & .company {
     color: $color-navy;
-    & :hover {
+    &:hover {
       color: $color-whiteblue;
     }
   }
