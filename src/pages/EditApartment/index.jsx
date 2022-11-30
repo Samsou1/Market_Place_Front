@@ -27,7 +27,7 @@ const EditApartment = () => {
     }
     try {
       const id = window.location.pathname.split('/')[2];
-      await APIManager.updateApartment(id, data);
+      await APIManager.editApartment(id, data);
       navigate('/myapartments');
     } catch (err) {
       console.error(err)
@@ -35,18 +35,18 @@ const EditApartment = () => {
   }
 
   const SetAll = (apartment) => {
-    apartment.title? setTitle(apartment.title): setTitle("");
-    apartment.description? setDescription(apartment.description): setDescription("");
-    apartment.price? setPrice(apartment.price): setPrice("");
-    apartment.surface? setSurface(apartment.surface): setSurface("");
-    apartment.address? setAddress(apartment.address): setAddress("");
-    apartment.city? setCity(apartment.city):setCity("");
-    apartment.postal_code? setPostalCode(apartment.postal_code):setPostalCode("");
+    apartment.title ? setTitle(apartment.title) : setTitle("");
+    apartment.description ? setDescription(apartment.description) : setDescription("");
+    apartment.price ? setPrice(apartment.price) : setPrice("");
+    apartment.surface ? setSurface(apartment.surface) : setSurface("");
+    apartment.address ? setAddress(apartment.address) : setAddress("");
+    apartment.city ? setCity(apartment.city) : setCity("");
+    apartment.postal_code ? setPostalCode(apartment.postal_code) : setPostalCode("");
   }
 
   useEffect(() => {
     const id = window.location.pathname.split('/')[2];
-    const fetchApartment = async () => {await APIManager.getApartment(id).then(data => SetAll(data))};
+    const fetchApartment = async () => { await APIManager.getApartment(id).then(data => SetAll(data)) };
     fetchApartment().catch(console.error);
   }, [])
 
@@ -78,7 +78,7 @@ const EditApartment = () => {
         <input
           onChange={(e) => setPrice(e.target.value)}
           value={price}
-          type="text"
+          type="number"
           id="price"
           placeholder="Price"
         />
@@ -88,7 +88,7 @@ const EditApartment = () => {
         <input
           onChange={(e) => setSurface(e.target.value)}
           value={surface}
-          type="text"
+          type="number"
           id="surface"
           placeholder="Surface"
         />

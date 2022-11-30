@@ -1,38 +1,37 @@
-import React from 'react'
 import { useState } from 'react';
-import APIManager from "../../services/api"
+import APIManager from "../../services/api";
 import { useNavigate } from 'react-router-dom';
 
 const NewApartment = () => {
-  const [title, setTitle] = useState('')
-  const [description, setDescription] = useState('')
-  const [price, setPrice] = useState('')
-  const [surface, setSurface] = useState('')
-  const [address, setAddress] = useState('')
-  const [city, setCity] = useState('')
-  const [postalCode, setPostalCode] = useState('')
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [price, setPrice] = useState('');
+  const [surface, setSurface] = useState('');
+  const [address, setAddress] = useState('');
+  const [city, setCity] = useState('');
+  const [postalCode, setPostalCode] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
-        apartment: {
-            title: title,
-            description: description,
-            price: price,
-            surface: surface,
-            address: address,
-            city: city,
-            postal_code: postalCode
-        }
+      apartment: {
+        title: title,
+        description: description,
+        price: price,
+        surface: surface,
+        address: address,
+        city: city,
+        postal_code: postalCode
+      }
     }
     try {
-        await APIManager.newApartment(data);
-        navigate('/myapartments');
+      await APIManager.newApartment(data);
+      navigate('/myapartments');
     } catch (err) {
-        console.error(err)
+      console.error(err);
     }
-}
+  }
 
   return (
     <>
@@ -115,4 +114,4 @@ const NewApartment = () => {
   )
 }
 
-export default NewApartment
+export default NewApartment;

@@ -1,6 +1,5 @@
 import Cookies from 'js-cookie';
-import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import APIManager from "../../services/api";
 import { Link } from 'react-router-dom';
 import DeleteApartmentButton from '../../components/DeleteApartmentButton';
@@ -10,15 +9,15 @@ const ApartmentView = () => {
 
   useEffect(() => {
     const id = window.location.pathname.split('/')[2];
-    const fetchApartment = async () => {await APIManager.getApartment(id).then(data => setApartment(data))};
+    const fetchApartment = async () => { await APIManager.getApartment(id).then(data => setApartment(data)) };
     fetchApartment().catch(console.error);
   }, [])
 
-  if(!apartment.user){
+  if (!apartment.user) {
     return <h2>No apartment with such id</h2>
   }
 
-  if(Cookies.get('currentUser') && JSON.parse(Cookies.get('currentUser')).id === apartment.user_id){
+  if (Cookies.get('currentUser') && JSON.parse(Cookies.get('currentUser')).id === apartment.user_id) {
     return (
       <div>ApartmentView
         <h2>Title: {apartment.title}</h2>
@@ -30,10 +29,10 @@ const ApartmentView = () => {
         <p>Postal code: {apartment.postal_code}</p>
         <p>Contact: {apartment.user.email}</p>
         <Link className="link" to={`/editapartment/${apartment.id}`} >Edit</Link>
-        <DeleteApartmentButton/>
+        <DeleteApartmentButton />
       </div>
     )
-  }else{
+  } else {
     return (
       <div>ApartmentView
         <h2>Title: {apartment.title}</h2>
@@ -43,12 +42,10 @@ const ApartmentView = () => {
         <p>Address: {apartment.address}</p>
         <p>City: {apartment.city}</p>
         <p>Postal code: {apartment.postal_code}</p>
-        <p>Contact: {apartment.user.email}</p>  
+        <p>Contact: {apartment.user.email}</p>
       </div>
     )
   }
-
-  
 }
 
-export default ApartmentView
+export default ApartmentView;

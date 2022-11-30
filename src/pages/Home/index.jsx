@@ -1,5 +1,5 @@
-import Hero from '../../components/Hero'
-import ApartmentCards from '../../components/ApartmentCards'
+import Hero from '../../components/Hero';
+import ApartmentCards from '../../components/ApartmentCards';
 
 const Home = () => {
   return (
@@ -10,4 +10,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;

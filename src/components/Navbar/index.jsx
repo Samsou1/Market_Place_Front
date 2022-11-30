@@ -4,20 +4,18 @@ import logo_immo from '../../../src/images/logo.png';
 import LogoutButton from '../LogoutButton';
 
 const Navbar = () => {
-const [toggleMenu, setToggleMenu] = useState(false);
-const [largeur, setLargeur] = useState(window.innerWidth);
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
 
-const toggleNav = () => {
-  setToggleMenu(!toggleMenu)
-}
-
-useEffect(()=> {
-
-  const changeWidth = () => {
-    setLargeur(window.innerWidth);
+  const toggleNav = () => {
+    setToggleMenu(!toggleMenu)
   }
-window.addEventListener("resize", changeWidth);
 
+  useEffect(() => {
+    const changeWidth = () => {
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", changeWidth);
 
   return () => {
     window.removeEventListener("resize", changeWidth);
