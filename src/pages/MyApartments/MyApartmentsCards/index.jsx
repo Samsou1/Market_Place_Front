@@ -3,20 +3,20 @@ import { Link } from 'react-router-dom'
 const MyApartmentsCards = ({ apartment }) => {
   return (
     <div className='apartmentCard'>   
-      <div class="product-details">    
+      <div className="product-details">    
         <h3>{apartment.title}</h3>   
-        <p class="information">{apartment.description}</p>   
-        <div class="control">    
-          <button class="btn">
-            <span class="price">{apartment.price} €</span>
-            <span class="buy"><Link className="link" to={`/apartments/${apartment.id}`}>Have a look</Link></span>
+        <p className="information">{apartment.description}</p>   
+        <div className="control">    
+          <button className="btn">
+            <span className="price">{apartment.price} €</span>
+            <span className="buy"><Link className="link" to={`/apartments/${apartment.id}`}>Have a look</Link></span>
           </button>   
         </div>          
       </div>
       
-      <div class="product-image">  
+      <div className="product-image">  
         <img src="https://images.unsplash.com/photo-1606830733744-0ad778449672?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzl8fGNocmlzdG1hcyUyMHRyZWV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" />
-        <div class="info">
+        <div className="info">
           <ul>
             <li><strong>Surface: </strong>{apartment.surface} m²</li>
             <li><strong>Address: </strong>{apartment.address}</li>
