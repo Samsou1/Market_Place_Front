@@ -5,15 +5,7 @@ const About = () => {
   return (
     <div className='about'>
       <h1>About</h1>
-      <div className='about-story'>
-        <div className="about-story-left">
-          <h2>Story</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ad architecto maxime aliquid tenetur, sint commodi repudiandae omnis a consectetur magnam, veniam velit? Obcaecati incidunt perspiciatis eaque autem vero. Iure?</p>
-        </div>
-        <div className="about-story-right">
-          <img src='https://previews.123rf.com/images/pogorelovaolga/pogorelovaolga1906/pogorelovaolga190600030/124405403-sea-crab-entangled-in-plastic-on-the-background-of-landfills-and-garbage-bags-on-the-beach-polluted-.jpg' alt='story picture' />
-        </div>
-      </div>
+      
       <div className='about-goal'>
         <div className="about-goal-left">
           <img src={new_keys} alt="keys with house key ring" />
