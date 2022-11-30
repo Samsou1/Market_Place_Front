@@ -13,6 +13,7 @@ API.interceptors.request.use(({ headers, ...config }) => ({
       headers.Authorization || Cookies.get("bearerToken")
     }`,
   },
+
 }));
 
 export default class APIManager {

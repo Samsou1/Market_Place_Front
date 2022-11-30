@@ -56,6 +56,7 @@ const Navbar = () => {
             <li>
               <LogoutButton />
             </li>
+
           </ul>
         )}
         <svg>
