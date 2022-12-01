@@ -20,7 +20,7 @@ const ApartmentCards = () => {
       };
       fetchData().catch(console.error);
     }
-  }, []);
+  }, [apartments]);
 
   return (
     <section className="apartement-cards-container">

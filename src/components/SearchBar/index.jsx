@@ -10,7 +10,6 @@ const SearchBar = () => {
     e.preventDefault();
     navigate(`/apartments?search=${search}`);
     setSearch("");
-    window.location.reload(false);
   };
 
   return (
