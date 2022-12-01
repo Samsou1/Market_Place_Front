@@ -4,31 +4,31 @@ main {
   justify-content: center;
 }
 
-.new-title {
+.title-form {
   margin: 2rem;
 }
 
-.new-container-form {
+.container-form {
   & input {
     border: 1px solid $color-navy;
     padding: 12px 20px;
     margin: 8px 0;
     font-family: $font-family-content;
-    &[type="submit"] {
-      background-color: $color-navy;
-      color: #fff;
-      padding: 15px 0;
-      margin: 5px 0 15px 0;
-      border: none;
-      border-radius: 8px;
-      width: 100%;
-      cursor: pointer;
-      &:hover {
-        transition-duration: 0.2s;
-        background-color: $color-blue;
-      }
-    }
   }
+  & button {
+        background-color: $color-navy;
+        color: #fff;
+        padding: 15px 0;
+        margin: 2rem;
+        border: none;
+        border-radius: 8px;
+        width: 100%;
+        cursor: pointer;
+        &:hover {
+          transition-duration: 0.2s;
+          background-color: $color-blue;
+        }
+      }
 }
 
 $breakpoint-tablet: 768px;

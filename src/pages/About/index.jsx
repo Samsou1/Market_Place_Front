@@ -6,7 +6,7 @@ const About = () => {
     <div className='about'>
       <h1>About</h1>
       
-      <div className='about-goal'>
+      <div className='card about-goal'>
         <div className="about-goal-left">
           <img src={new_keys} alt="keys with house key ring" />
         </div>
@@ -20,27 +20,27 @@ const About = () => {
       <div className='about-team'>
         <h2>Our team</h2>
         <div className='team-cards'>
-          <div className='member-card'>
+          <div className='card member-card'>
             <h3>Name</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, modi?</p>
             <img src='https://cdn2.iconfinder.com/data/icons/app-ui-solid/64/profile_user_avatar_people_app_website-512.png' alt='member-picture'/>
           </div>
-          <div className='member-card'>
+          <div className='card member-card'>
             <h3>Name</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, modi?</p>
             <img src='https://cdn2.iconfinder.com/data/icons/app-ui-solid/64/profile_user_avatar_people_app_website-512.png' alt='member-picture'/>
           </div>
-          <div className='member-card'>
+          <div className='card member-card'>
             <h3>Name</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, modi?</p>
             <img src='https://cdn2.iconfinder.com/data/icons/app-ui-solid/64/profile_user_avatar_people_app_website-512.png' alt='member-picture'/>
           </div>
-          <div className='member-card'>
+          <div className='card member-card'>
             <h3>Name</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, modi?</p>
             <img src='https://cdn2.iconfinder.com/data/icons/app-ui-solid/64/profile_user_avatar_people_app_website-512.png' alt='member-picture'/>
           </div>
-          <div className='member-card'>
+          <div className='card member-card'>
             <h3>Name</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, modi?</p>
             <img src='https://cdn2.iconfinder.com/data/icons/app-ui-solid/64/profile_user_avatar_people_app_website-512.png' alt='member-picture'/>
