@@ -32,16 +32,40 @@
       color: white;
     }
   }
-}
-
-.apartmentCard.show{
-  width: 50%;
-  display: flex;
-  & div {
+  &.show {
+    width: 50%;
+    margin: 2rem;
     display: flex;
-    flex-direction: column;
-    text-align: left;
+    & div {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
   }
+  & .product-details {
+    & h3 {
+      display: inline-block;
+      position: relative;
+      text-align: center;
+      font-size: 26px;
+      color: $color-navy;
+      margin: 0;
+      margin-bottom: 2rem;
+    }   
+    & p {
+      text-align: left;
+      font-size: 18px;
+      font-weight: light;
+      color: $color-blue;
+      padding-bottom: 2rem;
+      padding-left: 2rem;
+      & .bold {
+        color: $color-navy;
+        padding-right: 0.75rem;
+      }
+    } 
+  }
+  & img {width: 100%;height: 100%;}
 }
 
 .product-details {
@@ -52,21 +76,6 @@
 	height: 100%;
 	float: left;
 	width: 50%;
-}
-
-.apartmentCard .product-details h3{
-	display: inline-block;
-	position: relative;
-	font-size: 26px;
-	color: $color-navy;
-	margin: 0;
-}
-
-.apartmentCard .product-details > p {
-	text-align: center;
-	font-size: 18px;
-	color: $color-blue;
-	padding-bottom: 2rem;
 }
 
 .control{
@@ -85,30 +94,65 @@
 	outline: none;
 	border: none;
 	color: #eee;
+  & span {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin:0;
+  }
+  & .price {
+    background: $color-blue;
+    color: $color-navy;
+    border: 0;
+    margin: 0;
+  }
+  & .look {
+    z-index: 3; font-weight: bolder;
+  }
+  &:hover {
+    background: $color-blue;
+    cursor: initial;
+  }
 }
 
 .btn-link {
   padding: 0.5rem;
 }
 
-.btn:hover{
-	background: $color-blue;
-  cursor: initial;}
-
-.btn span {
-	display: inline-block;
-  padding: 10px 20px;
-	font-size: 1.2em;
-	margin:0;
-}
-.btn .price{
-	background: $color-blue;
-  color: $color-navy;
-	border: 0;
-	margin: 0;
+.current_user_access {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.btn .look {z-index: 3; font-weight: bolder;}
+.edit_btn {
+	background:  $color-navy;
+	border-radius: 5px;
+  overflow: hidden;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	color: #eee;
+  width: 30%;
+  &:hover {
+    background: $color-blue;
+  }
+  & span {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin:0;
+  }
+}
+
+.delete_btn {
+  all: unset;
+  &:hover {
+    cursor: pointer;
+  }
+}
 
 .product-image {
 	transition: all 0.3s ease-out;
@@ -119,8 +163,6 @@
 	width: 45%;
 	display: inline-block;
 }
-
-.apartmentCard img {width: 100%;height: 100%;}
 
 .info {
     background: rgba(95, 168, 211, 0.75);

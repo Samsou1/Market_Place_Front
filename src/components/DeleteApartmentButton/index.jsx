@@ -16,7 +16,7 @@ const DeleteApartmentButton = () => {
   }
 
   return (
-    <button onClick={handleClick}>Delete</button>
+    <button onClick={handleClick} className="delete_btn">Delete</button>
   )
 }
 
