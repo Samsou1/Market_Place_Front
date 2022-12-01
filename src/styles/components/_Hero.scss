@@ -9,6 +9,8 @@
     width: 100%;
     height: calc(100vh - 80px);
     object-fit: cover;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
   }
   & div {
     position: absolute;
