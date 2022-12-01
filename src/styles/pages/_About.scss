@@ -26,8 +26,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-goal{
   max-width: 80%;
-  display: flex;
-  flex-wrap: wrap;
   align-items: center;
   border-radius: 5px;
   gap: 1rem;
@@ -80,4 +78,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .member-card > img{
   height: 150px;
+}
+
+@media (min-width: $breakpoint-medium-devices) {
+  .about-goal {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }

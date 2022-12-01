@@ -33,7 +33,7 @@
     }
   }
   &.show {
-    width: 50%;
+    width: 80%;
     margin: 2rem;
     display: flex;
     & div {
@@ -211,8 +211,19 @@
 
 @media (min-width: $breakpoint-medium-devices) {
   .apartement-cards-container {
+    width: 90%;
     & div {
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+  }
+  .apartmentCard.show {
+    width: 50%;
+    margin: 2rem;
+    display: flex;
+    & div {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
     }
   }
 }
