@@ -20,7 +20,7 @@ const SearchBar = () => {
           value={search}
           type="text"
           id="search"
-          placeholder="Search"
+          placeholder="Location"
         />
       </div>
     </form>
