@@ -1,14 +1,41 @@
 .profileCard{
   box-shadow: 0 10px 20px 1px grey;
 	background: rgba(255, 255, 255, 0.90);
-	text-align: center;
 	border-radius: 10px;
 	overflow: hidden;
-  display: flex; 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
   flex-direction: column;
   width: 80%;
   padding: 2rem;
   color: $color-blue;
+  & p {
+    text-align: left;
+  }
+}
+
+.btn_profile {
+  all: unset;
+	background:  $color-navy;
+  width: 30%;
+	border-radius: 5px;
+  overflow: hidden;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	color: #eee;
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 16px;
+  margin:0;
+  text-align: center;
+  &:hover {
+    background: $color-blue;
+    cursor: pointer;
+  }
 }
 
 @media (min-width: $breakpoint-medium-devices) {
