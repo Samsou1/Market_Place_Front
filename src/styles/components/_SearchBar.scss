@@ -1,0 +1,14 @@
+.search-container-form {
+  & input {
+    border: 1px solid $color-navy;
+    padding: 8px 20px;
+    margin-top: 1.5rem;
+  }
+  }
+  
+  $breakpoint-tablet: 768px;
+@media (min-width: $breakpoint-tablet) {
+  .search-form-container {
+    min-width: 400px;
+  }
+}

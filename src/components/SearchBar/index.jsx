@@ -14,7 +14,7 @@ const SearchBar = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="container-form">
+    <form onSubmit={handleSubmit} className="search-container-form">
       <div className="input-container">
         <input
           onChange={(e) => setSearch(e.target.value)}
