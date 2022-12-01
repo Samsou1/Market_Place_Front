@@ -4,17 +4,26 @@ import Cookies from "js-cookie";
 const BASE_URL = "http://localhost:3000";
 const API = axios.create({ baseURL: BASE_URL });
 
-API.interceptors.request.use(({ headers, ...config }) => ({
-  ...config,
-  headers: {
-    ...headers,
-    "Content-Type": "application/json",
-    Authorization: `Bearer ${
-      headers.Authorization || Cookies.get("bearerToken")
-    }`,
-  },
-
-}));
+API.interceptors.request.use(({ headers, ...config }) =>
+  headers.Authorization || Cookies.get("bearerToken")
+    ? {
+        ...config,
+        headers: {
+          ...headers,
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${
+            headers.Authorization || Cookies.get("bearerToken")
+          }`,
+        },
+      }
+    : {
+        ...config,
+        headers: {
+          ...headers,
+          "Content-Type": "application/json",
+        },
+      }
+);
 
 export default class APIManager {
   static async registerUser(payload) {
@@ -39,6 +48,7 @@ export default class APIManager {
         response.headers.get("Authorization").slice(7)
       );
       Cookies.set("currentUser", JSON.stringify(response.data.user));
+      console.log(response);
       return response;
     } catch {
       throw new Error("Invalid email or password");
@@ -51,6 +61,7 @@ export default class APIManager {
         const response = await API.delete("/users/sign_out", {
           headers: { Authorization: Cookies.get("bearerToken") },
         });
+        console.log(response);
         Cookies.remove("bearerToken");
         Cookies.remove("currentUser");
         return response;
@@ -120,7 +131,8 @@ export default class APIManager {
     try {
       const response = await API.get("/apartments?search_term=user");
       return response.data;
-    } catch {
+    } catch (err) {
+      console.log(err);
       throw new Error("Something went wrong");
     }
   }
