@@ -16,7 +16,7 @@ const MyApartments = () => {
     <h2>My apartments:</h2>
 
     <p>You can also create a new ad by clicking on this link:</p>
-    <Link className="btn btn-link" to='/newapartment' >New apartment</Link>
+    <Link className="btn btn-link" to='/newapartment'>New apartment</Link>
 
     <div className='apartmentCards'>
       {apartments.map(apartment => {
