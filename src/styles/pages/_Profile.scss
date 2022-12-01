@@ -1,0 +1,18 @@
+.profileCard{
+  box-shadow: 0 10px 20px 1px grey;
+	background: rgba(255, 255, 255, 0.90);
+	text-align: center;
+	border-radius: 10px;
+	overflow: hidden;
+  display: flex; 
+  flex-direction: column;
+  width: 80%;
+  padding: 2rem;
+  color: $color-blue;
+}
+
+@media (min-width: $breakpoint-medium-devices) {
+  .profileCard {
+    width: 50%;
+  }
+}
