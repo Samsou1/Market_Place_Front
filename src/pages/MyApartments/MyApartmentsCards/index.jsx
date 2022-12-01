@@ -21,7 +21,8 @@ const MyApartmentsCards = ({ apartment }) => {
             <li><strong>Surface: </strong>{apartment.surface} m²</li>
             <li><strong>Address: </strong>{apartment.address}</li>
             <li><strong>City: </strong>{apartment.city}</li>
-            <li><strong>Postal code: </strong>{apartment.postal_code}</li>            
+            <li><strong>Postal code: </strong>{apartment.postal_code}</li>
+            <li><img src='' alt=''></img></li>    
           </ul>
         </div>
       </div>

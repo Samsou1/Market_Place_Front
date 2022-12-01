@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import APIManager from "../../services/api";
 import ApartmentCard from "./ApartmentCard";
+import SearchBar from "../SearchBar";
 
 const ApartmentCards = () => {
   const [apartments, setApartments] = useState([]);
@@ -20,11 +21,12 @@ const ApartmentCards = () => {
       };
       fetchData().catch(console.error);
     }
-  }, [apartments]);
+  }, []);
 
   return (
     <section className="apartement-cards-container">
       <h2>Our selection of apartments:</h2>
+      <SearchBar/>
       <div className="apartmentCards">
         {apartments.map((apartment) => {
           return (

@@ -13,6 +13,11 @@ const ApartmentView = () => {
     fetchApartment().catch(console.error);
   }, [])
 
+  useEffect(() => {
+    console.log(apartment)
+    console.log(apartment.picture)
+  },[apartment])
+
   if (!apartment.user) {
     return <h2>No apartment with such id</h2>
   }
@@ -43,6 +48,7 @@ const ApartmentView = () => {
         <p>City: {apartment.city}</p>
         <p>Postal code: {apartment.postal_code}</p>
         <p>Contact: {apartment.user.email}</p>
+        <img src={apartment.picture} alt='apartment picture'></img>
       </div>
     )
   }

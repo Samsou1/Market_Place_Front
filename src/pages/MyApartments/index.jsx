@@ -11,6 +11,10 @@ const MyApartments = () => {
     fetchData().catch(console.error);
   }, [])
 
+  useEffect(() => {
+    console.log(apartments)
+  },[apartments])
+
   return (
   <section className='apartement-cards-container'>
     <h2>My apartments:</h2>

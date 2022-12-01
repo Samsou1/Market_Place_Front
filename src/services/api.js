@@ -10,7 +10,7 @@ API.interceptors.request.use(({ headers, ...config }) =>
         ...config,
         headers: {
           ...headers,
-          "Content-Type": "application/json",
+          "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${
             headers.Authorization || Cookies.get("bearerToken")
           }`,
@@ -103,6 +103,7 @@ export default class APIManager {
   static async getApartment(id) {
     try {
       const response = await API.get(`/apartments/${id}`);
+      console.log(response)
       return response.data;
     } catch {
       throw new Error("Something went wrong");

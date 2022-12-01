@@ -10,22 +10,34 @@ const NewApartment = () => {
   const [address, setAddress] = useState('');
   const [city, setCity] = useState('');
   const [postalCode, setPostalCode] = useState('');
+  const [picture, setPicture] = useState([]);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = {
-      apartment: {
-        title: title,
-        description: description,
-        price: price,
-        surface: surface,
-        address: address,
-        city: city,
-        postal_code: postalCode
-      }
-    }
+    const data = new FormData();
+    data.append("picture", e.target.file.files[0])
+    data.append("description", description)
+    data.append("price", price)
+    data.append("surface", surface)
+    data.append("address", address)
+    data.append("city", city)
+    data.append("postal_code", postalCode)
+    console.log(e.target.file.files[0])
+    // const data = {
+    //   apartment: {
+    //     title: title,
+    //     description: description,
+    //     price: price,
+    //     surface: surface,
+    //     address: address,
+    //     city: city,
+    //     postal_code: postalCode,
+    //     picture: document.querySelector('#file').value
+    //   }
+    // }
     try {
+        console.log(data)
       await APIManager.newApartment(data);
       navigate('/myapartments');
     } catch (err) {
@@ -107,7 +119,17 @@ const NewApartment = () => {
                         placeholder="Postal Code"
                     />
                 </div>
-                {/* TODO: do the same with other optional fields */}
+                <div className='input-container'>
+                    <label htmlFor="file">Pictures</label>
+                    <input
+                        type="file"
+                        id="file"
+                        placeholder='Picture'
+                        accept="image/*" 
+                        multiple={false}
+                        name="file"
+                    />
+                </div>
                 <input type="submit" value="Begin" />
             </form>
         </>
