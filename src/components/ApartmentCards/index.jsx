@@ -24,7 +24,7 @@ const ApartmentCards = () => {
 
   return (
     <section className="apartement-cards-container">
-      <h2>Our selection of apartments:</h2>
+      <h2 className="apartement_title">Our selection of apartments:</h2>
       <div className="apartmentCards">
         {apartments.map((apartment) => {
           return (

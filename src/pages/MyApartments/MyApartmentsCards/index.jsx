@@ -15,7 +15,7 @@ const MyApartmentsCards = ({ apartment }) => {
       </div>
       
       <div className="product-image">  
-        <img src="https://images.unsplash.com/photo-1606830733744-0ad778449672?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzl8fGNocmlzdG1hcyUyMHRyZWV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" />
+        <img src="https://images.unsplash.com/photo-1571055107559-3e67626fa8be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80" alt="anouncement_illustration" />
         <div className="info">
           <ul>
             <li><strong>Surface: </strong>{apartment.surface} m²</li>
