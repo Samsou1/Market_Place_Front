@@ -115,16 +115,29 @@
   }
 }
 
-.btn-link {
-  padding: 0.5rem;
-}
-
 .current_user_access {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+}
+
+.new_btn {
+	background:  $color-navy;
+	border-radius: 5px;
+  overflow: hidden;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	color: #eee;
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 16px;
+  margin:0;
+  &:hover {
+    background: $color-blue;
+  }
 }
 
 .edit_btn {
@@ -188,6 +201,13 @@
 
 .product-image:hover img {transition: all 0.3s ease-out;}
 .product-image:hover img {transform: scale(1.2, 1.2);}
+
+.new_btn_footer {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
 
 @media (min-width: $breakpoint-medium-devices) {
   .apartement-cards-container {

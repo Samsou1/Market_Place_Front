@@ -15,7 +15,7 @@ const ApartmentView = () => {
   }, [])
 
   if (!apartment.user) {
-    return <h2>No apartment with such id</h2>
+    return <h3>No apartment with such id</h3>
   }
 
   if (Cookies.get('currentUser') && JSON.parse(Cookies.get('currentUser')).id === apartment.user_id) {
@@ -24,12 +24,12 @@ const ApartmentView = () => {
         <div className="product-details">    
           <h3>{apartment.title}</h3>   
           <p className="information">{apartment.description}</p>
-          <p className="price">{apartment.price} €</p>
-          <p>Surface: {apartment.surface}</p>
-          <p>Address: {apartment.address}</p>
-          <p>City: {apartment.city}</p>
-          <p>Postal code: {apartment.postal_code}</p>
-          <p>Contact: {apartment.user.email}</p>   
+          <p className="price"><strong className='bold'>Price: </strong>{apartment.price} €</p>
+          <p><strong className='bold'>Surface: </strong>{apartment.surface}</p>
+          <p><strong className='bold'>Address: </strong>{apartment.address}</p>
+          <p><strong className='bold'>City: </strong>{apartment.city}</p>
+          <p><strong className='bold'>Postal code: </strong>{apartment.postal_code}</p>
+          <p><strong className='bold'>Contact: </strong>{apartment.user.email}</p>    
           <container className="current_user_access">    
             <button className="edit_btn">              
               <span><Link className="edit" to={`/editapartment/${apartment.id}`}>Edit</Link></span>

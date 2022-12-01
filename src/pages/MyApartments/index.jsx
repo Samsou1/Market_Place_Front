@@ -13,16 +13,13 @@ const MyApartments = () => {
 
   return (
   <section className='apartement-cards-container'>
-    <h2>My apartments:</h2>
-
-    <p>You can also create a new ad by clicking on this link:</p>
-    <Link className="btn btn-link" to='/newapartment'>New apartment</Link>
-
+    <h2 className="apartement_title">My apartments:</h2>
     <div className='apartmentCards'>
       {apartments.map(apartment => {
         return <MyApartmentsCards key={apartment.id + apartment.title} apartment={apartment}/>
       })}
     </div>
+    <container className="new_btn_footer"><Link className="new_btn" to='/newapartment'>New apartment</Link></container>
   </section>
   )
 }
