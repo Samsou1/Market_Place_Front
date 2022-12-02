@@ -7,7 +7,7 @@ if (Cookies.get('currentUser')) {
   return (
     // autoPlay loop (Add it later before muted)
     <section className="hero-container">
-      <video src={videoBg} muted></video>
+      <video src={videoBg} autoPlay muted loop></video>
       <div>
         <h1>Welcome to ImmoCorps</h1>
         <p>Get into real estate, can be given to everyone!</p>
