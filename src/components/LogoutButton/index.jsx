@@ -9,6 +9,7 @@ const LogoutButton = () => {
     try {
       await APIManager.logoutUser();
       navigate("/");
+      window.location.reload();
     } catch (error) {
       console.error(error);
     }

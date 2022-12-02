@@ -19,6 +19,7 @@ function Login() {
     try {
       await APIManager.loginUser(data);
       navigate("/");
+      window.location.reload();
     } catch (err) {
       console.error(err);
     }
